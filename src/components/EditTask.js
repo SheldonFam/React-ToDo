@@ -14,20 +14,26 @@ const EditTask = (props) => {
   }, [props]);
 
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        props.updateTask(task.id, task);
-      }}
-    >
-      <input
-        type="text"
-        name="name"
-        value={task.name}
-        onChange={handleInputChange}
-      />
-      <button>Update</button>
-    </form>
+    <div class="w-full">
+      <form
+        class="pt-6 pb-8 mb-4"
+        onSubmit={(event) => {
+          event.preventDefault();
+          props.updateTask(task.id, task);
+        }}
+      >
+        <input
+          class="mx-2 shadow appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          name="name"
+          value={task.name}
+          onChange={handleInputChange}
+        />
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          Update
+        </button>
+      </form>
+    </div>
   );
 };
 
