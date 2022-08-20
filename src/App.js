@@ -38,26 +38,18 @@ const App = () => {
   };
 
   return (
-    <div class="flex flex-col items-center justify-center">
-      <h1 class="text-3xl text-center">React Todo</h1>
-      <div>
+    <div class="flex flex-col items-center justify-center h-screen">
+      <div class="px-4 py-4 border-solid border-2 border-indigo-600 rounded-md shadow-xl">
+        <h1 class="text-3xl text-center">React Todo</h1>
         {editing ? (
-          <div>
-            <h2 class="text-center">EditTask</h2>
-            <EditTask
-              setEditing={setEditing}
-              currentTask={currentTask}
-              updateTask={updateTask}
-            />
-          </div>
+          <EditTask
+            setEditing={setEditing}
+            currentTask={currentTask}
+            updateTask={updateTask}
+          />
         ) : (
-          <div>
-            <h2 class="text-center">AddTask</h2>
-            <AddTask addTask={addTask} />
-          </div>
+          <AddTask addTask={addTask} />
         )}
-      </div>
-      <div>
         <Task tasks={tasks} editTask={editTask} deleteTask={deleteTask} />
       </div>
     </div>
