@@ -14,9 +14,9 @@ const EditTask = (props) => {
   }, [props]);
 
   return (
-    <div class="w-full">
+    <div class="flex flex-col items-center justify-center">
       <form
-        class="pt-6 pb-8 mb-4"
+        class="pt-6 pb-8"
         onSubmit={(event) => {
           event.preventDefault();
           props.updateTask(task.id, task);
