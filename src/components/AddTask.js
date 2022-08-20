@@ -12,7 +12,7 @@ const AddTask = (props) => {
   };
 
   return (
-    <div class="w-full">
+    <div>
       <form
         class="pt-6 pb-6"
         onSubmit={(event) => {
